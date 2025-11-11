@@ -1,0 +1,89 @@
+helpdesk-app | GET /api/auth/user 304 in 1ms :: {"claims":{"sub":"admin","email":"admin@helpde…
+helpdesk-app | Error fetching tickets: AggregateError [ECONNREFUSED]: 
+helpdesk-app |     at /app/node_modules/pg-pool/index.js:45:11
+helpdesk-app |     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+helpdesk-app |     at async file:///app/node_modules/drizzle-orm/node-postgres/session.js:83:22
+helpdesk-app |     at async DatabaseStorage.getAllTickets (file:///app/dist/index.js:246:16)
+helpdesk-app |     at async file:///app/dist/index.js:691:76 {
+helpdesk-app |   code: 'ECONNREFUSED',
+helpdesk-app |   [errors]: [
+helpdesk-app |     Error: connect ECONNREFUSED ::1:5432
+helpdesk-app |         at createConnectionError (node:net:1652:14)
+helpdesk-app |         at afterConnectMultiple (node:net:1682:16) {
+helpdesk-app |       errno: -111,
+helpdesk-app |       code: 'ECONNREFUSED',
+helpdesk-app |       syscall: 'connect',
+helpdesk-app |       address: '::1',
+helpdesk-app |       port: 5432
+helpdesk-app |     },
+helpdesk-app |     Error: connect ECONNREFUSED 127.0.0.1:5432
+helpdesk-app |         at createConnectionError (node:net:1652:14)
+helpdesk-app |         at afterConnectMultiple (node:net:1682:16) {
+helpdesk-app |       errno: -111,
+helpdesk-app |       code: 'ECONNREFUSED',
+helpdesk-app |       syscall: 'connect',
+helpdesk-app |       address: '127.0.0.1',
+helpdesk-app |       port: 5432
+helpdesk-app |     }
+helpdesk-app |   ]
+helpdesk-app | }
+helpdesk-app | GET /api/tickets 500 in 5ms :: {"message":"Failed to fetch tickets"}
+helpdesk-app | Error fetching users: AggregateError [ECONNREFUSED]: 
+helpdesk-app |     at /app/node_modules/pg-pool/index.js:45:11
+helpdesk-app |     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+helpdesk-app |     at async file:///app/node_modules/drizzle-orm/node-postgres/session.js:83:22
+helpdesk-app |     at async DatabaseStorage.getAllUsers (file:///app/dist/index.js:229:16)
+helpdesk-app |     at async file:///app/dist/index.js:681:22 {
+helpdesk-app |   code: 'ECONNREFUSED',
+helpdesk-app |   [errors]: [
+helpdesk-app |     Error: connect ECONNREFUSED ::1:5432
+helpdesk-app |         at createConnectionError (node:net:1652:14)
+helpdesk-app |         at afterConnectMultiple (node:net:1682:16) {
+helpdesk-app |       errno: -111,
+helpdesk-app |       code: 'ECONNREFUSED',
+helpdesk-app |       syscall: 'connect',
+helpdesk-app |       address: '::1',
+helpdesk-app |       port: 5432
+helpdesk-app |     },
+helpdesk-app |     Error: connect ECONNREFUSED 127.0.0.1:5432
+helpdesk-app |         at createConnectionError (node:net:1652:14)
+helpdesk-app |         at afterConnectMultiple (node:net:1682:16) {
+helpdesk-app |       errno: -111,
+helpdesk-app |       code: 'ECONNREFUSED',
+helpdesk-app |       syscall: 'connect',
+helpdesk-app |       address: '127.0.0.1',
+helpdesk-app |       port: 5432
+helpdesk-app |     }
+helpdesk-app |   ]
+helpdesk-app | }
+helpdesk-app | GET /api/users 500 in 5ms :: {"message":"Failed to fetch users"}
+helpdesk-app | GET /api/health 200 in 1ms :: {"status":"ok","timestamp":"2025-11-11T23:26:31.2…
+helpdesk-app | Error creating ticket: AggregateError [ECONNREFUSED]: 
+helpdesk-app |     at /app/node_modules/pg-pool/index.js:45:11
+helpdesk-app |     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+helpdesk-app |     at async file:///app/node_modules/drizzle-orm/node-postgres/session.js:83:22
+helpdesk-app |     at async DatabaseStorage.getAllSlaTemplates (file:///app/dist/index.js:273:16)
+helpdesk-app |     at async file:///app/dist/index.js:705:29 {
+helpdesk-app |   code: 'ECONNREFUSED',
+helpdesk-app |   [errors]: [
+helpdesk-app |     Error: connect ECONNREFUSED ::1:5432
+helpdesk-app |         at createConnectionError (node:net:1652:14)
+helpdesk-app |         at afterConnectMultiple (node:net:1682:16) {
+helpdesk-app |       errno: -111,
+helpdesk-app |       code: 'ECONNREFUSED',
+helpdesk-app |       syscall: 'connect',
+helpdesk-app |       address: '::1',
+helpdesk-app |       port: 5432
+helpdesk-app |     },
+helpdesk-app |     Error: connect ECONNREFUSED 127.0.0.1:5432
+helpdesk-app |         at createConnectionError (node:net:1652:14)
+helpdesk-app |         at afterConnectMultiple (node:net:1682:16) {
+helpdesk-app |       errno: -111,
+helpdesk-app |       code: 'ECONNREFUSED',
+helpdesk-app |       syscall: 'connect',
+helpdesk-app |       address: '127.0.0.1',
+helpdesk-app |       port: 5432
+helpdesk-app |     }
+helpdesk-app |   ]
+helpdesk-app | }
+helpdesk-app | POST /api/tickets 500 in 5ms :: {"message":"Failed to create ticket"}
