@@ -1,0 +1,168 @@
+pdesk-app |       close: [Function],
+helpdesk-app |       open: [Function]
+helpdesk-app |     },
+helpdesk-app |     _eventsCount: 4,
+helpdesk-app |     _maxListeners: undefined,
+helpdesk-app |     _binaryType: 'arraybuffer',
+helpdesk-app |     _closeCode: 1006,
+helpdesk-app |     _closeFrameReceived: false,
+helpdesk-app |     _closeFrameSent: false,
+helpdesk-app |     _closeMessage: <Buffer >,
+helpdesk-app |     _closeTimer: null,
+helpdesk-app |     _errorEmitted: true,
+helpdesk-app |     _extensions: {},
+helpdesk-app |     _paused: false,
+helpdesk-app |     _protocol: '',
+helpdesk-app |     _readyState: 3,
+helpdesk-app |     _receiver: null,
+helpdesk-app |     _sender: null,
+helpdesk-app |     _socket: null,
+helpdesk-app |     _bufferedAmount: 0,
+helpdesk-app |     _isServer: false,
+helpdesk-app |     _redirects: 0,
+helpdesk-app |     _autoPong: true,
+helpdesk-app |     _url: 'wss://localhost/v2',
+helpdesk-app |     _req: null,
+helpdesk-app |     [Symbol(shapeMode)]: false,
+helpdesk-app |     [Symbol(kCapture)]: false
+helpdesk-app |   },
+helpdesk-app |   [Symbol(kType)]: 'error',
+helpdesk-app |   [Symbol(kError)]: AggregateError [ECONNREFUSED]: 
+helpdesk-app |       at internalConnectMultiple (node:net:1122:18)
+helpdesk-app |       at afterConnectMultiple (node:net:1689:7) {
+helpdesk-app |     code: 'ECONNREFUSED',
+helpdesk-app |     [errors]: [ [Error], [Error] ]
+helpdesk-app |   },
+helpdesk-app |   [Symbol(kMessage)]: ''
+helpdesk-app | }
+helpdesk-app | GET /api/tickets 500 in 9ms :: {"message":"Failed to fetch tickets"}
+helpdesk-app | Error fetching users: ErrorEvent {
+helpdesk-app |   [Symbol(kTarget)]: WebSocket {
+helpdesk-app |     _events: [Object: null prototype] {
+helpdesk-app |       error: [Function],
+helpdesk-app |       message: [Function],
+helpdesk-app |       close: [Function],
+helpdesk-app |       open: [Function]
+helpdesk-app |     },
+helpdesk-app |     _eventsCount: 4,
+helpdesk-app |     _maxListeners: undefined,
+helpdesk-app |     _binaryType: 'arraybuffer',
+helpdesk-app |     _closeCode: 1006,
+helpdesk-app |     _closeFrameReceived: false,
+helpdesk-app |     _closeFrameSent: false,
+helpdesk-app |     _closeMessage: <Buffer >,
+helpdesk-app |     _closeTimer: null,
+helpdesk-app |     _errorEmitted: true,
+helpdesk-app |     _extensions: {},
+helpdesk-app |     _paused: false,
+helpdesk-app |     _protocol: '',
+helpdesk-app |     _readyState: 3,
+helpdesk-app |     _receiver: null,
+helpdesk-app |     _sender: null,
+helpdesk-app |     _socket: null,
+helpdesk-app |     _bufferedAmount: 0,
+helpdesk-app |     _isServer: false,
+helpdesk-app |     _redirects: 0,
+helpdesk-app |     _autoPong: true,
+helpdesk-app |     _url: 'wss://localhost/v2',
+helpdesk-app |     _req: null,
+helpdesk-app |     [Symbol(shapeMode)]: false,
+helpdesk-app |     [Symbol(kCapture)]: false
+helpdesk-app |   },
+helpdesk-app |   [Symbol(kType)]: 'error',
+helpdesk-app |   [Symbol(kError)]: AggregateError [ECONNREFUSED]: 
+helpdesk-app |       at internalConnectMultiple (node:net:1122:18)
+helpdesk-app |       at afterConnectMultiple (node:net:1689:7) {
+helpdesk-app |     code: 'ECONNREFUSED',
+helpdesk-app |     [errors]: [ [Error], [Error] ]
+helpdesk-app |   },
+helpdesk-app |   [Symbol(kMessage)]: ''
+helpdesk-app | }
+helpdesk-app | GET /api/users 500 in 8ms :: {"message":"Failed to fetch users"}
+helpdesk-app | Error creating ticket: ErrorEvent {
+helpdesk-app |   [Symbol(kTarget)]: WebSocket {
+helpdesk-app |     _events: [Object: null prototype] {
+helpdesk-app |       error: [Function],
+helpdesk-app |       message: [Function],
+helpdesk-app |       close: [Function],
+helpdesk-app |       open: [Function]
+helpdesk-app |     },
+helpdesk-app |     _eventsCount: 4,
+helpdesk-app |     _maxListeners: undefined,
+helpdesk-app |     _binaryType: 'arraybuffer',
+helpdesk-app |     _closeCode: 1006,
+helpdesk-app |     _closeFrameReceived: false,
+helpdesk-app |     _closeFrameSent: false,
+helpdesk-app |     _closeMessage: <Buffer >,
+helpdesk-app |     _closeTimer: null,
+helpdesk-app |     _errorEmitted: true,
+helpdesk-app |     _extensions: {},
+helpdesk-app |     _paused: false,
+helpdesk-app |     _protocol: '',
+helpdesk-app |     _readyState: 3,
+helpdesk-app |     _receiver: null,
+helpdesk-app |     _sender: null,
+helpdesk-app |     _socket: null,
+helpdesk-app |     _bufferedAmount: 0,
+helpdesk-app |     _isServer: false,
+helpdesk-app |     _redirects: 0,
+helpdesk-app |     _autoPong: true,
+helpdesk-app |     _url: 'wss://localhost/v2',
+helpdesk-app |     _req: null,
+helpdesk-app |     [Symbol(shapeMode)]: false,
+helpdesk-app |     [Symbol(kCapture)]: false
+helpdesk-app |   },
+helpdesk-app |   [Symbol(kType)]: 'error',
+helpdesk-app |   [Symbol(kError)]: AggregateError [ECONNREFUSED]: 
+helpdesk-app |       at internalConnectMultiple (node:net:1122:18)
+helpdesk-app |       at afterConnectMultiple (node:net:1689:7) {
+helpdesk-app |     code: 'ECONNREFUSED',
+helpdesk-app |     [errors]: [ [Error], [Error] ]
+helpdesk-app |   },
+helpdesk-app |   [Symbol(kMessage)]: ''
+helpdesk-app | }
+helpdesk-app | POST /api/tickets 500 in 9ms :: {"message":"Failed to create ticket"}
+helpdesk-app | Error creating ticket: ErrorEvent {
+helpdesk-app |   [Symbol(kTarget)]: WebSocket {
+helpdesk-app |     _events: [Object: null prototype] {
+helpdesk-app |       error: [Function],
+helpdesk-app |       message: [Function],
+helpdesk-app |       close: [Function],
+helpdesk-app |       open: [Function]
+helpdesk-app |     },
+helpdesk-app |     _eventsCount: 4,
+helpdesk-app |     _maxListeners: undefined,
+helpdesk-app |     _binaryType: 'arraybuffer',
+helpdesk-app |     _closeCode: 1006,
+helpdesk-app |     _closeFrameReceived: false,
+helpdesk-app |     _closeFrameSent: false,
+helpdesk-app |     _closeMessage: <Buffer >,
+helpdesk-app |     _closeTimer: null,
+helpdesk-app |     _errorEmitted: true,
+helpdesk-app |     _extensions: {},
+helpdesk-app |     _paused: false,
+helpdesk-app |     _protocol: '',
+helpdesk-app |     _readyState: 3,
+helpdesk-app |     _receiver: null,
+helpdesk-app |     _sender: null,
+helpdesk-app |     _socket: null,
+helpdesk-app |     _bufferedAmount: 0,
+helpdesk-app |     _isServer: false,
+helpdesk-app |     _redirects: 0,
+helpdesk-app |     _autoPong: true,
+helpdesk-app |     _url: 'wss://localhost/v2',
+helpdesk-app |     _req: null,
+helpdesk-app |     [Symbol(shapeMode)]: false,
+helpdesk-app |     [Symbol(kCapture)]: false
+helpdesk-app |   },
+helpdesk-app |   [Symbol(kType)]: 'error',
+helpdesk-app |   [Symbol(kError)]: AggregateError [ECONNREFUSED]: 
+helpdesk-app |       at internalConnectMultiple (node:net:1122:18)
+helpdesk-app |       at afterConnectMultiple (node:net:1689:7) {
+helpdesk-app |     code: 'ECONNREFUSED',
+helpdesk-app |     [errors]: [ [Error], [Error] ]
+helpdesk-app |   },
+helpdesk-app |   [Symbol(kMessage)]: ''
+helpdesk-app | }
+helpdesk-app | POST /api/tickets 500 in 5ms :: {"message":"Failed to create ticket"}
+helpdesk-app | GET /api/health 200 in 2ms :: {"status":"ok","timestamp":"2025-11-11T23:17:01.3…
