@@ -1,0 +1,68 @@
+ => [stage-1 3/6] RUN addgroup -g 1001 -S nodejs &&     adduser -S nodejs -u 1001                                                                                                                                                       0.2s
+ => [builder 3/6] COPY package*.json ./                                                                                                                                                                                                 0.1s
+ => [builder 4/6] RUN npm ci                                                                                                                                                                                                           12.8s
+ => [builder 5/6] COPY . .                                                                                                                                                                                                              0.0s 
+ => [builder 6/6] RUN npm run build                                                                                                                                                                                                     8.8s 
+ => [stage-1 4/6] COPY --from=builder --chown=nodejs:nodejs /app/dist ./dist                                                                                                                                                            0.0s 
+ => [stage-1 5/6] COPY --from=builder --chown=nodejs:nodejs /app/package*.json ./                                                                                                                                                       0.4s 
+ => [stage-1 6/6] RUN npm ci --only=production &&     npm cache clean --force                                                                                                                                                          10.4s 
+ => exporting to image                                                                                                                                                                                                                  4.3s 
+ => => exporting layers                                                                                                                                                                                                                 4.3s 
+ => => writing image sha256:f8d687b2106efbcc77304bfce87447067e770dba1b42a39f6623a3aa59c5a2d8                                                                                                                                            0.0s 
+ => => naming to docker.io/library/app-helpdesk_helpdesk                                                                                                                                                                                0.0s 
+Creating network "app-helpdesk_default" with the default driver                                                                                                                                                                              
+Creating helpdesk-app ... done
+Attaching to helpdesk-app
+helpdesk-app | node:internal/modules/esm/resolve:873
+helpdesk-app |   throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+helpdesk-app |         ^
+helpdesk-app | 
+helpdesk-app | Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /app/dist/index.js
+helpdesk-app |     at packageResolve (node:internal/modules/esm/resolve:873:9)
+helpdesk-app |     at moduleResolve (node:internal/modules/esm/resolve:946:18)
+helpdesk-app |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+helpdesk-app |     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:708:12)
+helpdesk-app |     at #cachedDefaultResolve (node:internal/modules/esm/loader:657:25)
+helpdesk-app |     at ModuleLoader.resolve (node:internal/modules/esm/loader:640:38)
+helpdesk-app |     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:264:38)
+helpdesk-app |     at ModuleJob._link (node:internal/modules/esm/module_job:168:49) {
+helpdesk-app |   code: 'ERR_MODULE_NOT_FOUND'
+helpdesk-app | }
+helpdesk-app | 
+helpdesk-app | Node.js v20.19.5
+helpdesk-app | node:internal/modules/esm/resolve:873
+helpdesk-app |   throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+helpdesk-app |         ^
+helpdesk-app | 
+helpdesk-app | Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /app/dist/index.js
+helpdesk-app |     at packageResolve (node:internal/modules/esm/resolve:873:9)
+helpdesk-app |     at moduleResolve (node:internal/modules/esm/resolve:946:18)
+helpdesk-app |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+helpdesk-app |     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:708:12)
+helpdesk-app |     at #cachedDefaultResolve (node:internal/modules/esm/loader:657:25)
+helpdesk-app |     at ModuleLoader.resolve (node:internal/modules/esm/loader:640:38)
+helpdesk-app |     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:264:38)
+helpdesk-app |     at ModuleJob._link (node:internal/modules/esm/module_job:168:49) {
+helpdesk-app |   code: 'ERR_MODULE_NOT_FOUND'
+helpdesk-app | }
+helpdesk-app | 
+helpdesk-app | Node.js v20.19.5
+helpdesk-app | node:internal/modules/esm/resolve:873
+helpdesk-app |   throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+helpdesk-app |         ^
+helpdesk-app | 
+helpdesk-app | Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /app/dist/index.js
+helpdesk-app |     at packageResolve (node:internal/modules/esm/resolve:873:9)
+helpdesk-app |     at moduleResolve (node:internal/modules/esm/resolve:946:18)
+helpdesk-app |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+helpdesk-app |     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:708:12)
+helpdesk-app |     at #cachedDefaultResolve (node:internal/modules/esm/loader:657:25)
+helpdesk-app |     at ModuleLoader.resolve (node:internal/modules/esm/loader:640:38)
+helpdesk-app |     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:264:38)
+helpdesk-app |     at ModuleJob._link (node:internal/modules/esm/module_job:168:49) {
+helpdesk-app |   code: 'ERR_MODULE_NOT_FOUND'
+helpdesk-app | }
+helpdesk-app | 
+helpdesk-app | Node.js v20.19.5
+helpdesk-app exited with code 1
+sup_cristian@srvdbwhu:/var/www/html/app-helpdesk$ 

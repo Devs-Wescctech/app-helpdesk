@@ -18,6 +18,9 @@ COPY . .
 # Build do frontend e backend
 RUN npm run build
 
+# Copiar arquivo static.ts compilado manualmente para dist
+RUN npx esbuild server/static.ts --platform=node --packages=external --bundle=false --format=esm --outdir=dist
+
 # Stage 2: Production
 FROM node:20-alpine
 
