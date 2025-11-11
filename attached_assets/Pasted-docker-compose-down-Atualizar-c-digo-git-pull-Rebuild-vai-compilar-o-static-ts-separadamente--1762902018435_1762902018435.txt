@@ -1,0 +1,109 @@
+docker-compose down
+
+# Atualizar código
+git pull
+
+# Rebuild (vai compilar o static.ts separadamente)
+docker-compose build --no-cache
+
+# Iniciar
+docker-compose up -d
+
+# Ver logs
+docker-compose logs -f
+Stopping helpdesk-app ... done
+Removing helpdesk-app ... done
+Removing network app-helpdesk_default
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 5 (delta 3), reused 5 (delta 3), pack-reused 0 (from 0)
+Unpacking objects: 100% (5/5), 1.68 KiB | 1.68 MiB/s, done.
+From https://github.com/Devs-Wescctech/app-helpdesk
+   153cbdf..c208684  main       -> origin/main
+Updating 153cbdf..c208684
+Fast-forward
+ Dockerfile                                                                                                                |  3 +++
+ attached_assets/Pasted--stage-1-3-6-RUN-addgroup-g-1001-S-nodejs-adduser-S-nodejs-u-1001--1762901869699_1762901869699.txt | 68 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 71 insertions(+)
+ create mode 100644 attached_assets/Pasted--stage-1-3-6-RUN-addgroup-g-1001-S-nodejs-adduser-S-nodejs-u-1001--1762901869699_1762901869699.txt
+Building helpdesk
+[+] Building 39.4s (16/16) FINISHED                                                                                                                                                                                           docker:default
+ => [internal] load build definition from Dockerfile                                                                                                                                                                                    0.0s
+ => => transferring dockerfile: 1.48kB                                                                                                                                                                                                  0.0s
+ => [internal] load metadata for docker.io/library/node:20-alpine                                                                                                                                                                       0.5s
+ => [internal] load .dockerignore                                                                                                                                                                                                       0.0s
+ => => transferring context: 546B                                                                                                                                                                                                       0.0s
+ => [internal] load build context                                                                                                                                                                                                       0.0s
+ => => transferring context: 27.21kB                                                                                                                                                                                                    0.0s
+ => [builder 1/7] FROM docker.io/library/node:20-alpine@sha256:6178e78b972f79c335df281f4b7674a2d85071aae2af020ffa39f0a770265435                                                                                                         0.0s
+ => CACHED [builder 2/7] WORKDIR /app                                                                                                                                                                                                   0.0s
+ => [stage-1 3/6] RUN addgroup -g 1001 -S nodejs &&     adduser -S nodejs -u 1001                                                                                                                                                       0.2s
+ => [builder 3/7] COPY package*.json ./                                                                                                                                                                                                 0.0s
+ => [builder 4/7] RUN npm ci                                                                                                                                                                                                           12.6s
+ => [builder 5/7] COPY . .                                                                                                                                                                                                              0.0s 
+ => [builder 6/7] RUN npm run build                                                                                                                                                                                                     8.7s 
+ => [builder 7/7] RUN npx esbuild server/static.ts --platform=node --packages=external --bundle=false --format=esm --outdir=dist                                                                                                        1.0s 
+ => [stage-1 4/6] COPY --from=builder --chown=nodejs:nodejs /app/dist ./dist                                                                                                                                                            0.0s 
+ => [stage-1 5/6] COPY --from=builder --chown=nodejs:nodejs /app/package*.json ./                                                                                                                                                       0.4s 
+ => [stage-1 6/6] RUN npm ci --only=production &&     npm cache clean --force                                                                                                                                                          10.3s 
+ => exporting to image                                                                                                                                                                                                                  4.5s 
+ => => exporting layers                                                                                                                                                                                                                 4.5s 
+ => => writing image sha256:f6dc5d4dc1137e2c5accb8c0d41a216dc392f20cae5992e453d7f2e7e1ddb76f                                                                                                                                            0.0s 
+ => => naming to docker.io/library/app-helpdesk_helpdesk                                                                                                                                                                                0.0s 
+Creating network "app-helpdesk_default" with the default driver                                                                                                                                                                              
+Creating helpdesk-app ... done
+Attaching to helpdesk-app
+helpdesk-app | node:internal/modules/esm/resolve:873
+helpdesk-app |   throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+helpdesk-app |         ^
+helpdesk-app | 
+helpdesk-app | Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /app/dist/index.js
+helpdesk-app |     at packageResolve (node:internal/modules/esm/resolve:873:9)
+helpdesk-app |     at moduleResolve (node:internal/modules/esm/resolve:946:18)
+helpdesk-app |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+helpdesk-app |     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:708:12)
+helpdesk-app |     at #cachedDefaultResolve (node:internal/modules/esm/loader:657:25)
+helpdesk-app |     at ModuleLoader.resolve (node:internal/modules/esm/loader:640:38)
+helpdesk-app |     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:264:38)
+helpdesk-app |     at ModuleJob._link (node:internal/modules/esm/module_job:168:49) {
+helpdesk-app |   code: 'ERR_MODULE_NOT_FOUND'
+helpdesk-app | }
+helpdesk-app | 
+helpdesk-app | Node.js v20.19.5
+helpdesk-app | node:internal/modules/esm/resolve:873
+helpdesk-app |   throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+helpdesk-app |         ^
+helpdesk-app | 
+helpdesk-app | Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /app/dist/index.js
+helpdesk-app |     at packageResolve (node:internal/modules/esm/resolve:873:9)
+helpdesk-app |     at moduleResolve (node:internal/modules/esm/resolve:946:18)
+helpdesk-app |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+helpdesk-app |     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:708:12)
+helpdesk-app |     at #cachedDefaultResolve (node:internal/modules/esm/loader:657:25)
+helpdesk-app |     at ModuleLoader.resolve (node:internal/modules/esm/loader:640:38)
+helpdesk-app |     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:264:38)
+helpdesk-app |     at ModuleJob._link (node:internal/modules/esm/module_job:168:49) {
+helpdesk-app |   code: 'ERR_MODULE_NOT_FOUND'
+helpdesk-app | }
+helpdesk-app | 
+helpdesk-app | Node.js v20.19.5
+helpdesk-app | node:internal/modules/esm/resolve:873
+helpdesk-app |   throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+helpdesk-app |         ^
+helpdesk-app | 
+helpdesk-app | Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /app/dist/index.js
+helpdesk-app |     at packageResolve (node:internal/modules/esm/resolve:873:9)
+helpdesk-app |     at moduleResolve (node:internal/modules/esm/resolve:946:18)
+helpdesk-app |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+helpdesk-app |     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:708:12)
+helpdesk-app |     at #cachedDefaultResolve (node:internal/modules/esm/loader:657:25)
+helpdesk-app |     at ModuleLoader.resolve (node:internal/modules/esm/loader:640:38)
+helpdesk-app |     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:264:38)
+helpdesk-app |     at ModuleJob._link (node:internal/modules/esm/module_job:168:49) {
+helpdesk-app |   code: 'ERR_MODULE_NOT_FOUND'
+helpdesk-app | }
+helpdesk-app | 
+helpdesk-app | Node.js v20.19.5
+helpdesk-app exited with code 1
+sup_cristian@srvdbwhu:/var/www/html/app-helpdesk$ 

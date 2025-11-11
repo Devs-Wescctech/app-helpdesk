@@ -64,7 +64,9 @@ app.use((req, res, next) => {
   // setting up all the other routes so the catch-all route
   // doesn't interfere with the other routes
   if (app.get("env") === "development") {
-    const { setupVite } = await import("./vite.js");
+    // Use string concatenation to hide import from esbuild bundler
+    const vitePath = './vite' + '.js';
+    const { setupVite } = await import(vitePath);
     await setupVite(app, server);
   } else {
     const { serveStatic } = await import("./static.js");
