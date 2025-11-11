@@ -1,6 +1,47 @@
-node_modules
-dist
-.DS_Store
+# Dependências
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build
+dist/
+build/
 server/public
-vite.config.ts.*
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Replit
+.replit
+replit.nix
+
+# Testes
+coverage/
+.nyc_output/
+
+# Temporários
+tmp/
+temp/
+*.tmp
 *.tar.gz
+
+# Sistema
+Thumbs.db
+vite.config.ts.*

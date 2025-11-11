@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  helpdesk:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: helpdesk-app
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+      # Database - use sua conexão PostgreSQL externa
+      - DATABASE_URL=${DATABASE_URL}
+      - PGHOST=${PGHOST}
+      - PGPORT=${PGPORT}
+      - PGUSER=${PGUSER}
+      - PGPASSWORD=${PGPASSWORD}
+      - PGDATABASE=${PGDATABASE}
+      # Session Secret
+      - SESSION_SECRET=${SESSION_SECRET}
+      # OIDC Auth (opcional)
+      - ISSUER_URL=${ISSUER_URL:-}
+      - CLIENT_ID=${CLIENT_ID:-}
+      - CLIENT_SECRET=${CLIENT_SECRET:-}
+      - APP_URL=${APP_URL:-http://localhost:5000}
+    # Se o PostgreSQL estiver no mesmo servidor mas fora do Docker
+    # use network_mode: host para acessar localhost
+    # network_mode: host
+    
+    # OU configure extra_hosts se precisar acessar o host
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:5000/api/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    
+    # Volumes para logs (opcional)
+    volumes:
+      - ./logs:/app/logs
+
+# Se quiser usar um PostgreSQL no Docker (não recomendado pelo usuário)
+# descomente as linhas abaixo:
+#
+#   postgres:
+#     image: postgres:16-alpine
+#     container_name: helpdesk-postgres
+#     restart: unless-stopped
+#     environment:
+#       - POSTGRES_USER=helpdesk_user
+#       - POSTGRES_PASSWORD=senha_segura
+#       - POSTGRES_DB=helpdesk
+#     ports:
+#       - "5432:5432"
+#     volumes:
+#       - postgres_data:/var/lib/postgresql/data
+#
+# volumes:
+#   postgres_data:
