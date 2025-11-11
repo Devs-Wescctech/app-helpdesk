@@ -47,14 +47,23 @@ export async function setupAuth(app: Express) {
 
 // No authentication - allow all requests
 export const isAuthenticated: RequestHandler = async (req, res, next) => {
-  // Set a fake user for compatibility
+  // Set a fake user for compatibility with full profile
   (req as any).user = {
     claims: {
       sub: 'admin',
       email: 'admin@helpdesk.local',
       first_name: 'Admin',
       last_name: 'User'
-    }
+    },
+    // Include full user profile to avoid database lookup
+    id: 'admin',
+    email: 'admin@helpdesk.local',
+    firstName: 'Admin',
+    lastName: 'User',
+    role: 'admin',
+    department: null,
+    profileImageUrl: null,
+    phone: null
   };
   return next();
 };

@@ -26,6 +26,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.get("/api/auth/user", isAuthenticated, async (req: any, res) => {
     try {
+      // In NO-AUTH mode, user object is already populated by isAuthenticated
+      // Check if user has full profile (from simpleAuth)
+      if (req.user.id && req.user.email) {
+        return res.json(req.user);
+      }
+      
+      // Otherwise fetch from database (OIDC mode)
       const userId = req.user.claims.sub;
       const user = await storage.getUser(userId);
       res.json(user);

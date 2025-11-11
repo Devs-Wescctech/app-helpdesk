@@ -1,0 +1,173 @@
+helpdesk-app |       message: [Function],
+helpdesk-app |       close: [Function],
+helpdesk-app |       open: [Function]
+helpdesk-app |     },
+helpdesk-app |     _eventsCount: 4,
+helpdesk-app |     _maxListeners: undefined,
+helpdesk-app |     _binaryType: 'arraybuffer',
+helpdesk-app |     _closeCode: 1006,
+helpdesk-app |     _closeFrameReceived: false,
+helpdesk-app |     _closeFrameSent: false,
+helpdesk-app |     _closeMessage: <Buffer >,
+helpdesk-app |     _closeTimer: null,
+helpdesk-app |     _errorEmitted: true,
+helpdesk-app |     _extensions: {},
+helpdesk-app |     _paused: false,
+helpdesk-app |     _protocol: '',
+helpdesk-app |     _readyState: 3,
+helpdesk-app |     _receiver: null,
+helpdesk-app |     _sender: null,
+helpdesk-app |     _socket: null,
+helpdesk-app |     _bufferedAmount: 0,
+helpdesk-app |     _isServer: false,
+helpdesk-app |     _redirects: 0,
+helpdesk-app |     _autoPong: true,
+helpdesk-app |     _url: 'wss://localhost/v2',
+helpdesk-app |     _req: null,
+helpdesk-app |     [Symbol(shapeMode)]: false,
+helpdesk-app |     [Symbol(kCapture)]: false
+helpdesk-app |   },
+helpdesk-app |   [Symbol(kType)]: 'error',
+helpdesk-app |   [Symbol(kError)]: AggregateError [ECONNREFUSED]: 
+helpdesk-app |       at internalConnectMultiple (node:net:1122:18)
+helpdesk-app |       at afterConnectMultiple (node:net:1689:7) {
+helpdesk-app |     code: 'ECONNREFUSED',
+helpdesk-app |     [errors]: [ [Error], [Error] ]
+helpdesk-app |   },
+helpdesk-app |   [Symbol(kMessage)]: ''
+helpdesk-app | }
+helpdesk-app | GET /api/auth/user 500 in 5ms :: {"message":"Failed to fetch user"}
+helpdesk-app | GET /api/health 200 in 2ms :: {"status":"ok","timestamp":"2025-11-11T23:10:56.3…
+helpdesk-app | GET /api/health 200 in 1ms :: {"status":"ok","timestamp":"2025-11-11T23:11:26.4…
+helpdesk-app | Error fetching user: ErrorEvent {
+helpdesk-app |   [Symbol(kTarget)]: WebSocket {
+helpdesk-app |     _events: [Object: null prototype] {
+helpdesk-app |       error: [Function],
+helpdesk-app |       message: [Function],
+helpdesk-app |       close: [Function],
+helpdesk-app |       open: [Function]
+helpdesk-app |     },
+helpdesk-app |     _eventsCount: 4,
+helpdesk-app |     _maxListeners: undefined,
+helpdesk-app |     _binaryType: 'arraybuffer',
+helpdesk-app |     _closeCode: 1006,
+helpdesk-app |     _closeFrameReceived: false,
+helpdesk-app |     _closeFrameSent: false,
+helpdesk-app |     _closeMessage: <Buffer >,
+helpdesk-app |     _closeTimer: null,
+helpdesk-app |     _errorEmitted: true,
+helpdesk-app |     _extensions: {},
+helpdesk-app |     _paused: false,
+helpdesk-app |     _protocol: '',
+helpdesk-app |     _readyState: 3,
+helpdesk-app |     _receiver: null,
+helpdesk-app |     _sender: null,
+helpdesk-app |     _socket: null,
+helpdesk-app |     _bufferedAmount: 0,
+helpdesk-app |     _isServer: false,
+helpdesk-app |     _redirects: 0,
+helpdesk-app |     _autoPong: true,
+helpdesk-app |     _url: 'wss://localhost/v2',
+helpdesk-app |     _req: null,
+helpdesk-app |     [Symbol(shapeMode)]: false,
+helpdesk-app |     [Symbol(kCapture)]: false
+helpdesk-app |   },
+helpdesk-app |   [Symbol(kType)]: 'error',
+helpdesk-app |   [Symbol(kError)]: AggregateError [ECONNREFUSED]: 
+helpdesk-app |       at internalConnectMultiple (node:net:1122:18)
+helpdesk-app |       at afterConnectMultiple (node:net:1689:7) {
+helpdesk-app |     code: 'ECONNREFUSED',
+helpdesk-app |     [errors]: [ [Error], [Error] ]
+helpdesk-app |   },
+helpdesk-app |   [Symbol(kMessage)]: ''
+helpdesk-app | }
+helpdesk-app | GET /api/auth/user 500 in 5ms :: {"message":"Failed to fetch user"}
+helpdesk-app | Error fetching user: ErrorEvent {
+helpdesk-app |   [Symbol(kTarget)]: WebSocket {
+helpdesk-app |     _events: [Object: null prototype] {
+helpdesk-app |       error: [Function],
+helpdesk-app |       message: [Function],
+helpdesk-app |       close: [Function],
+helpdesk-app |       open: [Function]
+helpdesk-app |     },
+helpdesk-app |     _eventsCount: 4,
+helpdesk-app |     _maxListeners: undefined,
+helpdesk-app |     _binaryType: 'arraybuffer',
+helpdesk-app |     _closeCode: 1006,
+helpdesk-app |     _closeFrameReceived: false,
+helpdesk-app |     _closeFrameSent: false,
+helpdesk-app |     _closeMessage: <Buffer >,
+helpdesk-app |     _closeTimer: null,
+helpdesk-app |     _errorEmitted: true,
+helpdesk-app |     _extensions: {},
+helpdesk-app |     _paused: false,
+helpdesk-app |     _protocol: '',
+helpdesk-app |     _readyState: 3,
+helpdesk-app |     _receiver: null,
+helpdesk-app |     _sender: null,
+helpdesk-app |     _socket: null,
+helpdesk-app |     _bufferedAmount: 0,
+helpdesk-app |     _isServer: false,
+helpdesk-app |     _redirects: 0,
+helpdesk-app |     _autoPong: true,
+helpdesk-app |     _url: 'wss://localhost/v2',
+helpdesk-app |     _req: null,
+helpdesk-app |     [Symbol(shapeMode)]: false,
+helpdesk-app |     [Symbol(kCapture)]: false
+helpdesk-app |   },
+helpdesk-app |   [Symbol(kType)]: 'error',
+helpdesk-app |   [Symbol(kError)]: AggregateError [ECONNREFUSED]: 
+helpdesk-app |       at internalConnectMultiple (node:net:1122:18)
+helpdesk-app |       at afterConnectMultiple (node:net:1689:7) {
+helpdesk-app |     code: 'ECONNREFUSED',
+helpdesk-app |     [errors]: [ [Error], [Error] ]
+helpdesk-app |   },
+helpdesk-app |   [Symbol(kMessage)]: ''
+helpdesk-app | }
+helpdesk-app | GET /api/auth/user 500 in 5ms :: {"message":"Failed to fetch user"}
+helpdesk-app | GET /api/login 302 in 1ms
+helpdesk-app | Error fetching user: ErrorEvent {
+helpdesk-app |   [Symbol(kTarget)]: WebSocket {
+helpdesk-app |     _events: [Object: null prototype] {
+helpdesk-app |       error: [Function],
+helpdesk-app |       message: [Function],
+helpdesk-app |       close: [Function],
+helpdesk-app |       open: [Function]
+helpdesk-app |     },
+helpdesk-app |     _eventsCount: 4,
+helpdesk-app |     _maxListeners: undefined,
+helpdesk-app |     _binaryType: 'arraybuffer',
+helpdesk-app |     _closeCode: 1006,
+helpdesk-app |     _closeFrameReceived: false,
+helpdesk-app |     _closeFrameSent: false,
+helpdesk-app |     _closeMessage: <Buffer >,
+helpdesk-app |     _closeTimer: null,
+helpdesk-app |     _errorEmitted: true,
+helpdesk-app |     _extensions: {},
+helpdesk-app |     _paused: false,
+helpdesk-app |     _protocol: '',
+helpdesk-app |     _readyState: 3,
+helpdesk-app |     _receiver: null,
+helpdesk-app |     _sender: null,
+helpdesk-app |     _socket: null,
+helpdesk-app |     _bufferedAmount: 0,
+helpdesk-app |     _isServer: false,
+helpdesk-app |     _redirects: 0,
+helpdesk-app |     _autoPong: true,
+helpdesk-app |     _url: 'wss://localhost/v2',
+helpdesk-app |     _req: null,
+helpdesk-app |     [Symbol(shapeMode)]: false,
+helpdesk-app |     [Symbol(kCapture)]: false
+helpdesk-app |   },
+helpdesk-app |   [Symbol(kType)]: 'error',
+helpdesk-app |   [Symbol(kError)]: AggregateError [ECONNREFUSED]: 
+helpdesk-app |       at internalConnectMultiple (node:net:1122:18)
+helpdesk-app |       at afterConnectMultiple (node:net:1689:7) {
+helpdesk-app |     code: 'ECONNREFUSED',
+helpdesk-app |     [errors]: [ [Error], [Error] ]
+helpdesk-app |   },
+helpdesk-app |   [Symbol(kMessage)]: ''
+helpdesk-app | }
+helpdesk-app | GET /api/auth/user 500 in 6ms :: {"message":"Failed to fetch user"}
+helpdesk-app | GET /api/health 200 in 1ms :: {"status":"ok","timestamp":"2025-11-11T23:11:56.5…
+helpdesk-app | GET /api/health 200 in 1ms :: {"status":"ok","timestamp":"2025-11-11T23:12:26.6…
