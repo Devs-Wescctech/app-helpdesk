@@ -1,0 +1,151 @@
+sup_cristian@srvdbwhu:/var/www/html/app-helpdesk$ # Ver logs em tempo real
+docker-compose logs -f
+
+# Ou ver status
+docker-compose ps
+
+# Testar o health check
+curl http://localhost:5000/api/health
+Attaching to helpdesk-app
+helpdesk-app | node:internal/modules/esm/resolve:873
+helpdesk-app |   throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+helpdesk-app |         ^
+helpdesk-app | 
+helpdesk-app | Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /app/dist/index.js
+helpdesk-app |     at packageResolve (node:internal/modules/esm/resolve:873:9)
+helpdesk-app |     at moduleResolve (node:internal/modules/esm/resolve:946:18)
+helpdesk-app |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+helpdesk-app |     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:708:12)
+helpdesk-app |     at #cachedDefaultResolve (node:internal/modules/esm/loader:657:25)
+helpdesk-app |     at ModuleLoader.resolve (node:internal/modules/esm/loader:640:38)
+helpdesk-app |     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:264:38)
+helpdesk-app |     at ModuleJob._link (node:internal/modules/esm/module_job:168:49) {
+helpdesk-app |   code: 'ERR_MODULE_NOT_FOUND'
+helpdesk-app | }
+helpdesk-app | 
+helpdesk-app | Node.js v20.19.5
+helpdesk-app | node:internal/modules/esm/resolve:873
+helpdesk-app |   throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+helpdesk-app |         ^
+helpdesk-app | 
+helpdesk-app | Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /app/dist/index.js
+helpdesk-app |     at packageResolve (node:internal/modules/esm/resolve:873:9)
+helpdesk-app |     at moduleResolve (node:internal/modules/esm/resolve:946:18)
+helpdesk-app |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+helpdesk-app |     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:708:12)
+helpdesk-app |     at #cachedDefaultResolve (node:internal/modules/esm/loader:657:25)
+helpdesk-app |     at ModuleLoader.resolve (node:internal/modules/esm/loader:640:38)
+helpdesk-app |     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:264:38)
+helpdesk-app |     at ModuleJob._link (node:internal/modules/esm/module_job:168:49) {
+helpdesk-app |   code: 'ERR_MODULE_NOT_FOUND'
+helpdesk-app | }
+helpdesk-app | 
+helpdesk-app | Node.js v20.19.5
+helpdesk-app | node:internal/modules/esm/resolve:873
+helpdesk-app |   throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+helpdesk-app |         ^
+helpdesk-app | 
+helpdesk-app | Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /app/dist/index.js
+helpdesk-app |     at packageResolve (node:internal/modules/esm/resolve:873:9)
+helpdesk-app |     at moduleResolve (node:internal/modules/esm/resolve:946:18)
+helpdesk-app |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+helpdesk-app |     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:708:12)
+helpdesk-app |     at #cachedDefaultResolve (node:internal/modules/esm/loader:657:25)
+helpdesk-app |     at ModuleLoader.resolve (node:internal/modules/esm/loader:640:38)
+helpdesk-app |     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:264:38)
+helpdesk-app |     at ModuleJob._link (node:internal/modules/esm/module_job:168:49) {
+helpdesk-app |   code: 'ERR_MODULE_NOT_FOUND'
+helpdesk-app | }
+helpdesk-app | 
+helpdesk-app | Node.js v20.19.5
+helpdesk-app | node:internal/modules/esm/resolve:873
+helpdesk-app |   throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+helpdesk-app |         ^
+helpdesk-app | 
+helpdesk-app | Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /app/dist/index.js
+helpdesk-app |     at packageResolve (node:internal/modules/esm/resolve:873:9)
+helpdesk-app |     at moduleResolve (node:internal/modules/esm/resolve:946:18)
+helpdesk-app |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+helpdesk-app |     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:708:12)
+helpdesk-app |     at #cachedDefaultResolve (node:internal/modules/esm/loader:657:25)
+helpdesk-app |     at ModuleLoader.resolve (node:internal/modules/esm/loader:640:38)
+helpdesk-app |     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:264:38)
+helpdesk-app |     at ModuleJob._link (node:internal/modules/esm/module_job:168:49) {
+helpdesk-app |   code: 'ERR_MODULE_NOT_FOUND'
+helpdesk-app | }
+helpdesk-app | 
+helpdesk-app | Node.js v20.19.5
+helpdesk-app | node:internal/modules/esm/resolve:873
+helpdesk-app |   throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+helpdesk-app |         ^
+helpdesk-app | 
+helpdesk-app | Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /app/dist/index.js
+helpdesk-app |     at packageResolve (node:internal/modules/esm/resolve:873:9)
+helpdesk-app |     at moduleResolve (node:internal/modules/esm/resolve:946:18)
+helpdesk-app |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+helpdesk-app |     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:708:12)
+helpdesk-app |     at #cachedDefaultResolve (node:internal/modules/esm/loader:657:25)
+helpdesk-app |     at ModuleLoader.resolve (node:internal/modules/esm/loader:640:38)
+helpdesk-app |     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:264:38)
+helpdesk-app |     at ModuleJob._link (node:internal/modules/esm/module_job:168:49) {
+helpdesk-app |   code: 'ERR_MODULE_NOT_FOUND'
+helpdesk-app | }
+helpdesk-app | 
+helpdesk-app | Node.js v20.19.5
+helpdesk-app | node:internal/modules/esm/resolve:873
+helpdesk-app |   throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+helpdesk-app |         ^
+helpdesk-app | 
+helpdesk-app | Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /app/dist/index.js
+helpdesk-app |     at packageResolve (node:internal/modules/esm/resolve:873:9)
+helpdesk-app |     at moduleResolve (node:internal/modules/esm/resolve:946:18)
+helpdesk-app |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+helpdesk-app |     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:708:12)
+helpdesk-app |     at #cachedDefaultResolve (node:internal/modules/esm/loader:657:25)
+helpdesk-app |     at ModuleLoader.resolve (node:internal/modules/esm/loader:640:38)
+helpdesk-app |     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:264:38)
+helpdesk-app |     at ModuleJob._link (node:internal/modules/esm/module_job:168:49) {
+helpdesk-app |   code: 'ERR_MODULE_NOT_FOUND'
+helpdesk-app | }
+helpdesk-app | 
+helpdesk-app | Node.js v20.19.5
+helpdesk-app | node:internal/modules/esm/resolve:873
+helpdesk-app |   throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+helpdesk-app |         ^
+helpdesk-app | 
+helpdesk-app | Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /app/dist/index.js
+helpdesk-app |     at packageResolve (node:internal/modules/esm/resolve:873:9)
+helpdesk-app |     at moduleResolve (node:internal/modules/esm/resolve:946:18)
+helpdesk-app |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+helpdesk-app |     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:708:12)
+helpdesk-app |     at #cachedDefaultResolve (node:internal/modules/esm/loader:657:25)
+helpdesk-app |     at ModuleLoader.resolve (node:internal/modules/esm/loader:640:38)
+helpdesk-app |     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:264:38)
+helpdesk-app |     at ModuleJob._link (node:internal/modules/esm/module_job:168:49) {
+helpdesk-app |   code: 'ERR_MODULE_NOT_FOUND'
+helpdesk-app | }
+helpdesk-app | 
+helpdesk-app | Node.js v20.19.5
+helpdesk-app | node:internal/modules/esm/resolve:873
+helpdesk-app |   throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+helpdesk-app |         ^
+helpdesk-app | 
+helpdesk-app | Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /app/dist/index.js
+helpdesk-app |     at packageResolve (node:internal/modules/esm/resolve:873:9)
+helpdesk-app |     at moduleResolve (node:internal/modules/esm/resolve:946:18)
+helpdesk-app |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+helpdesk-app |     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:708:12)
+helpdesk-app |     at #cachedDefaultResolve (node:internal/modules/esm/loader:657:25)
+helpdesk-app |     at ModuleLoader.resolve (node:internal/modules/esm/loader:640:38)
+helpdesk-app |     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:264:38)
+helpdesk-app |     at ModuleJob._link (node:internal/modules/esm/module_job:168:49) {
+helpdesk-app |   code: 'ERR_MODULE_NOT_FOUND'
+helpdesk-app | }
+helpdesk-app | 
+helpdesk-app | Node.js v20.19.5
+helpdesk-app exited with code 1
+    Name                  Command                 State      Ports
+------------------------------------------------------------------
+helpdesk-app   docker-entrypoint.sh node  ...   Restarting        
+curl: (7) Failed to connect to localhost port 5000 after 0 ms: Connection refused
+sup_cristian@srvdbwhu:/var/www/html/app-helpdesk$ 
