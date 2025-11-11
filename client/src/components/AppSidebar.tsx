@@ -20,6 +20,9 @@ import {
 } from "@/components/ui/sidebar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useLocation } from "wouter";
+import { useAuth } from "@/hooks/useAuth";
+import { Button } from "@/components/ui/button";
+import type { User } from "@shared/schema";
 
 const menuItems = [
   {
@@ -59,6 +62,13 @@ const secondaryItems = [
 
 export function AppSidebar() {
   const [location] = useLocation();
+  const { user } = useAuth();
+  
+  const typedUser = user as User | undefined;
+  const userName = typedUser ? `${typedUser.firstName || ''} ${typedUser.lastName || ''}`.trim() || 'Usuário' : 'Usuário';
+  const userInitials = typedUser 
+    ? `${typedUser.firstName?.[0] || ''}${typedUser.lastName?.[0] || ''}`.toUpperCase() || 'U'
+    : 'U';
 
   return (
     <Sidebar>
@@ -122,13 +132,22 @@ export function AppSidebar() {
       <SidebarFooter className="p-4">
         <div className="flex items-center gap-3">
           <Avatar className="h-9 w-9">
-            <AvatarImage src="" />
-            <AvatarFallback>AD</AvatarFallback>
+            <AvatarImage src={typedUser?.profileImageUrl || ''} />
+            <AvatarFallback>{userInitials}</AvatarFallback>
           </Avatar>
           <div className="flex-1 overflow-hidden">
-            <p className="text-sm font-medium">Admin</p>
-            <p className="text-xs text-muted-foreground truncate">admin@empresa.com</p>
+            <p className="text-sm font-medium">{userName}</p>
+            <p className="text-xs text-muted-foreground truncate">{typedUser?.email || ''}</p>
           </div>
+          <Button
+            variant="ghost"
+            size="sm"
+            asChild
+            className="text-xs"
+            data-testid="button-logout"
+          >
+            <a href="/api/logout">Sair</a>
+          </Button>
         </div>
       </SidebarFooter>
     </Sidebar>
