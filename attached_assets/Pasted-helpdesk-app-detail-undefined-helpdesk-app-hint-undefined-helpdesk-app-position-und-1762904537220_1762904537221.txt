@@ -1,0 +1,50 @@
+helpdesk-app |   detail: undefined,
+helpdesk-app |   hint: undefined,
+helpdesk-app |   position: undefined,
+helpdesk-app |   internalPosition: undefined,
+helpdesk-app |   internalQuery: undefined,
+helpdesk-app |   where: undefined,
+helpdesk-app |   schema: undefined,
+helpdesk-app |   table: undefined,
+helpdesk-app |   column: undefined,
+helpdesk-app |   dataType: undefined,
+helpdesk-app |   constraint: undefined,
+helpdesk-app |   file: 'auth.c',
+helpdesk-app |   line: '530',
+helpdesk-app |   routine: 'ClientAuthentication'
+helpdesk-app | }
+helpdesk-app | POST /api/tickets 500 in 7ms :: {"message":"Failed to create ticket"}
+helpdesk-app | GET /api/health 200 in 1ms :: {"status":"ok","timestamp":"2025-11-11T23:39:38.0…
+helpdesk-app | GET /api/health 200 in 2ms :: {"status":"ok","timestamp":"2025-11-11T23:40:08.1…
+helpdesk-app | GET /api/health 200 in 1ms :: {"status":"ok","timestamp":"2025-11-11T23:40:38.2…
+helpdesk-app | GET /api/health 200 in 1ms :: {"status":"ok","timestamp":"2025-11-11T23:41:08.3…
+helpdesk-app | GET /api/health 200 in 1ms :: {"status":"ok","timestamp":"2025-11-11T23:41:38.5…
+helpdesk-app | GET /api/auth/user 304 in 1ms :: {"claims":{"sub":"admin","email":"admin@helpde…
+helpdesk-app | GET /api/users 200 in 51ms :: []
+helpdesk-app | GET /api/tickets 200 in 53ms :: []
+helpdesk-app | Error creating ticket: error: insert or update on table "tickets" violates foreign key constraint "tickets_requester_id_users_id_fk"
+helpdesk-app |     at /app/node_modules/pg-pool/index.js:45:11
+helpdesk-app |     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+helpdesk-app |     at async file:///app/node_modules/drizzle-orm/node-postgres/session.js:83:22
+helpdesk-app |     at async DatabaseStorage.createTicket (file:///app/dist/index.js:238:26)
+helpdesk-app |     at async file:///app/dist/index.js:713:22 {
+helpdesk-app |   length: 283,
+helpdesk-app |   severity: 'ERROR',
+helpdesk-app |   code: '23503',
+helpdesk-app |   detail: 'Key (requester_id)=(admin) is not present in table "users".',
+helpdesk-app |   hint: undefined,
+helpdesk-app |   position: undefined,
+helpdesk-app |   internalPosition: undefined,
+helpdesk-app |   internalQuery: undefined,
+helpdesk-app |   where: undefined,
+helpdesk-app |   schema: 'public',
+helpdesk-app |   table: 'tickets',
+helpdesk-app |   column: undefined,
+helpdesk-app |   dataType: undefined,
+helpdesk-app |   constraint: 'tickets_requester_id_users_id_fk',
+helpdesk-app |   file: 'ri_triggers.c',
+helpdesk-app |   line: '2772',
+helpdesk-app |   routine: 'ri_ReportViolation'
+helpdesk-app | }
+helpdesk-app | POST /api/tickets 500 in 14ms :: {"message":"Failed to create ticket"}
+helpdesk-app | GET /api/health 200 in 1ms :: {"status":"ok","timestamp":"2025-11-11T23:42:08.6…
