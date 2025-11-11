@@ -1,14 +1,22 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { setupAuth, isAuthenticated } from "./replitAuth";
 import { setupWebSocket } from "./websocket";
 import { insertTicketSchema, insertProjectSchema, insertProjectTaskSchema, insertSlaTemplateSchema } from "@shared/schema";
 import { z } from "zod";
 
 let wsManager: ReturnType<typeof setupWebSocket> | null = null;
 
+// Load auth module dynamically
+async function getAuthModule() {
+  const useSimpleAuth = !process.env.ISSUER_URL || !process.env.ISSUER_URL.startsWith('https://');
+  return useSimpleAuth 
+    ? await import("./simpleAuth.js")
+    : await import("./replitAuth.js");
+}
+
 export async function registerRoutes(app: Express): Promise<Server> {
+  const { setupAuth, isAuthenticated } = await getAuthModule();
   await setupAuth(app);
 
   // Health check endpoint for Docker

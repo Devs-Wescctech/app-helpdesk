@@ -1,0 +1,51 @@
+helpdesk-app |   code: 'OAUTH_HTTP_REQUEST_FORBIDDEN',
+helpdesk-app |   [cause]: OperationProcessingError: only requests to HTTPS are allowed
+helpdesk-app |       at OPE (file:///app/node_modules/oauth4webapi/build/index.js:116:12)
+helpdesk-app |       at checkProtocol (file:///app/node_modules/oauth4webapi/build/index.js:640:15)
+helpdesk-app |       at performDiscovery (file:///app/node_modules/oauth4webapi/build/index.js:229:5)
+helpdesk-app |       at Module.discoveryRequest (file:///app/node_modules/oauth4webapi/build/index.js:242:12)
+helpdesk-app |       at performDiscovery (file:///app/node_modules/openid-client/build/index.js:267:17)
+helpdesk-app |       at Module.discovery (file:///app/node_modules/openid-client/build/index.js:243:22)
+helpdesk-app |       at memoize.maxAge (file:///app/dist/index.js:345:25)
+helpdesk-app |       at memoized (/app/node_modules/memoizee/lib/configure-map.js:81:23)
+helpdesk-app |       at setupAuth (file:///app/dist/index.js:393:24)
+helpdesk-app |       at registerRoutes (file:///app/dist/index.js:537:9) {
+helpdesk-app |     code: 'OAUTH_HTTP_REQUEST_FORBIDDEN',
+helpdesk-app |     [cause]: URL {}
+helpdesk-app |   }
+helpdesk-app | }
+helpdesk-app | 
+helpdesk-app | Node.js v20.19.5
+helpdesk-app | file:///app/node_modules/openid-client/build/index.js:116
+helpdesk-app |     return new ClientError(msg, { cause, code });
+helpdesk-app |            ^
+helpdesk-app | 
+helpdesk-app | ClientError: only requests to HTTPS are allowed
+helpdesk-app |     at e (file:///app/node_modules/openid-client/build/index.js:116:12)
+helpdesk-app |     at errorHandler (file:///app/node_modules/openid-client/build/index.js:129:23)
+helpdesk-app |     at async performDiscovery (file:///app/node_modules/openid-client/build/index.js:266:16)
+helpdesk-app |     at async Module.discovery (file:///app/node_modules/openid-client/build/index.js:243:16)
+helpdesk-app |     at async memoize.maxAge (file:///app/dist/index.js:345:12)
+helpdesk-app |     at async setupAuth (file:///app/dist/index.js:393:18)
+helpdesk-app |     at async registerRoutes (file:///app/dist/index.js:537:3)
+helpdesk-app |     at async file:///app/dist/index.js:951:18 {
+helpdesk-app |   code: 'OAUTH_HTTP_REQUEST_FORBIDDEN',
+helpdesk-app |   [cause]: OperationProcessingError: only requests to HTTPS are allowed
+helpdesk-app |       at OPE (file:///app/node_modules/oauth4webapi/build/index.js:116:12)
+helpdesk-app |       at checkProtocol (file:///app/node_modules/oauth4webapi/build/index.js:640:15)
+helpdesk-app |       at performDiscovery (file:///app/node_modules/oauth4webapi/build/index.js:229:5)
+helpdesk-app |       at Module.discoveryRequest (file:///app/node_modules/oauth4webapi/build/index.js:242:12)
+helpdesk-app |       at performDiscovery (file:///app/node_modules/openid-client/build/index.js:267:17)
+helpdesk-app |       at Module.discovery (file:///app/node_modules/openid-client/build/index.js:243:22)
+helpdesk-app |       at memoize.maxAge (file:///app/dist/index.js:345:25)
+helpdesk-app |       at memoized (/app/node_modules/memoizee/lib/configure-map.js:81:23)
+helpdesk-app |       at setupAuth (file:///app/dist/index.js:393:24)
+helpdesk-app |       at registerRoutes (file:///app/dist/index.js:537:9) {
+helpdesk-app |     code: 'OAUTH_HTTP_REQUEST_FORBIDDEN',
+helpdesk-app |     [cause]: URL {}
+helpdesk-app |   }
+helpdesk-app | }
+helpdesk-app | 
+helpdesk-app | Node.js v20.19.5
+helpdesk-app exited with code 1
+sup_cristian@srvdbwhu:/var/www/html/app-helpdesk$ 
