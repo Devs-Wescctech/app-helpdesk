@@ -1,0 +1,68 @@
+ => => exporting layers                                                                                                                                                                                                                 4.6s 
+ => => writing image sha256:7e734fd3b60a2f669b50d404698241e7e218e6307d159d1537000896aa48a93b                                                                                                                                            0.0s 
+ => => naming to docker.io/library/app-helpdesk_helpdesk                                                                                                                                                                                0.0s 
+Creating network "app-helpdesk_default" with the default driver                                                                                                                                                                              
+Creating helpdesk-app ... done
+Attaching to helpdesk-app
+helpdesk-app | node:internal/url:806
+helpdesk-app |     const href = bindingUrl.parse(input, base, raiseException);
+helpdesk-app |                             ^
+helpdesk-app | 
+helpdesk-app | TypeError: Invalid URL
+helpdesk-app |     at new URL (node:internal/url:806:29)
+helpdesk-app |     at memoize.maxAge (file:///app/dist/index.js:346:7)
+helpdesk-app |     at memoized (/app/node_modules/memoizee/lib/configure-map.js:81:23)
+helpdesk-app |     at setupAuth (file:///app/dist/index.js:393:24)
+helpdesk-app |     at registerRoutes (file:///app/dist/index.js:537:9)
+helpdesk-app |     at file:///app/dist/index.js:951:24
+helpdesk-app |     at file:///app/dist/index.js:974:3
+helpdesk-app |     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+helpdesk-app |     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+helpdesk-app |     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+helpdesk-app |   code: 'ERR_INVALID_URL',
+helpdesk-app |   input: ''
+helpdesk-app | }
+helpdesk-app | 
+helpdesk-app | Node.js v20.19.5
+helpdesk-app | node:internal/url:806
+helpdesk-app |     const href = bindingUrl.parse(input, base, raiseException);
+helpdesk-app |                             ^
+helpdesk-app | 
+helpdesk-app | TypeError: Invalid URL
+helpdesk-app |     at new URL (node:internal/url:806:29)
+helpdesk-app |     at memoize.maxAge (file:///app/dist/index.js:346:7)
+helpdesk-app |     at memoized (/app/node_modules/memoizee/lib/configure-map.js:81:23)
+helpdesk-app |     at setupAuth (file:///app/dist/index.js:393:24)
+helpdesk-app |     at registerRoutes (file:///app/dist/index.js:537:9)
+helpdesk-app |     at file:///app/dist/index.js:951:24
+helpdesk-app |     at file:///app/dist/index.js:974:3
+helpdesk-app |     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+helpdesk-app |     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+helpdesk-app |     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+helpdesk-app |   code: 'ERR_INVALID_URL',
+helpdesk-app |   input: ''
+helpdesk-app | }
+helpdesk-app | 
+helpdesk-app | Node.js v20.19.5
+helpdesk-app | node:internal/url:806
+helpdesk-app |     const href = bindingUrl.parse(input, base, raiseException);
+helpdesk-app |                             ^
+helpdesk-app | 
+helpdesk-app | TypeError: Invalid URL
+helpdesk-app |     at new URL (node:internal/url:806:29)
+helpdesk-app |     at memoize.maxAge (file:///app/dist/index.js:346:7)
+helpdesk-app |     at memoized (/app/node_modules/memoizee/lib/configure-map.js:81:23)
+helpdesk-app |     at setupAuth (file:///app/dist/index.js:393:24)
+helpdesk-app |     at registerRoutes (file:///app/dist/index.js:537:9)
+helpdesk-app |     at file:///app/dist/index.js:951:24
+helpdesk-app |     at file:///app/dist/index.js:974:3
+helpdesk-app |     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+helpdesk-app |     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+helpdesk-app |     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+helpdesk-app |   code: 'ERR_INVALID_URL',
+helpdesk-app |   input: ''
+helpdesk-app | }
+helpdesk-app | 
+helpdesk-app | Node.js v20.19.5
+helpdesk-app exited with code 1
+sup_cristian@srvdbwhu:/var/www/html/app-helpdesk$ 
