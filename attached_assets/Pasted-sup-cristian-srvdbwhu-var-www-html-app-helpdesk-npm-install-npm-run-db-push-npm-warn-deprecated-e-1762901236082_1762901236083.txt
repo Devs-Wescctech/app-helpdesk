@@ -1,0 +1,93 @@
+sup_cristian@srvdbwhu:/var/www/html/app-helpdesk$ npm install
+npm run db:push
+npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+
+added 496 packages, and audited 497 packages in 10s
+
+67 packages are looking for funding
+  run `npm fund` for details
+
+8 vulnerabilities (3 low, 5 moderate)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.6.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.2
+npm notice To update run: npm install -g npm@11.6.2
+npm notice
+
+> rest-express@1.0.0 db:push
+> drizzle-kit push
+
+No config path provided, using default 'drizzle.config.ts'
+Reading config file '/var/www/html/app-helpdesk/drizzle.config.ts'
+Using 'pg' driver for database querying
+[⣷] Pulling schema from database...
+error: password authentication failed for user "sup_cristian"
+    at /var/www/html/app-helpdesk/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.query (/var/www/html/app-helpdesk/node_modules/drizzle-kit/bin.cjs:80601:26)
+    at async fromDatabase2 (/var/www/html/app-helpdesk/node_modules/drizzle-kit/bin.cjs:19253:25) {
+  length: 108,
+  severity: 'FATAL',
+  code: '28P01',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'auth.c',
+  line: '317',
+  routine: 'auth_failed'
+}
+sup_cristian@srvdbwhu:/var/www/html/app-helpdesk$ sudo -u postgres psql
+[sudo] password for sup_cristian: 
+psql (18.0 (Ubuntu 18.0-1.pgdg22.04+3))
+Type "help" for help.
+
+postgres=# CREATE DATABASE helpdesk;
+ERROR:  database "helpdesk" already exists
+postgres=# exit
+sup_cristian@srvdbwhu:/var/www/html/app-helpdesk$ nano .env
+sup_cristian@srvdbwhu:/var/www/html/app-helpdesk$ npm install
+npm run db:push
+
+up to date, audited 497 packages in 2s
+
+67 packages are looking for funding
+  run `npm fund` for details
+
+8 vulnerabilities (3 low, 5 moderate)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+> rest-express@1.0.0 db:push
+> drizzle-kit push
+
+No config path provided, using default 'drizzle.config.ts'
+Reading config file '/var/www/html/app-helpdesk/drizzle.config.ts'
+Using 'pg' driver for database querying
+[✓] Pulling schema from database...
+
+Is project_members table created or renamed from another table?
+❯ + project_members         create table
+  ~ teste › project_members rename table
