@@ -11,6 +11,11 @@ let wsManager: ReturnType<typeof setupWebSocket> | null = null;
 export async function registerRoutes(app: Express): Promise<Server> {
   await setupAuth(app);
 
+  // Health check endpoint for Docker
+  app.get("/api/health", (req, res) => {
+    res.status(200).json({ status: "ok", timestamp: new Date().toISOString() });
+  });
+
   app.get("/api/auth/user", isAuthenticated, async (req: any, res) => {
     try {
       const userId = req.user.claims.sub;

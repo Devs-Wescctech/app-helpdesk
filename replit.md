@@ -105,6 +105,24 @@ Preferred communication style: Simple, everyday language.
 - Session secrets for authentication
 - OIDC issuer URL configuration
 
+**Docker Deployment**:
+- Multi-stage Dockerfile for optimized production images
+- docker-compose.yml for easy container orchestration
+- Support for external PostgreSQL database
+- Health check endpoint at `/api/health`
+- Nginx reverse proxy configuration included
+- SSL/TLS support with Let's Encrypt
+- Detailed deployment instructions in DEPLOY.md
+
+**Environment Variables Required for Production**:
+- `NODE_ENV=production`
+- `PORT=5000`
+- `DATABASE_URL` - PostgreSQL connection string
+- `SESSION_SECRET` - Secure random string for session encryption
+- `APP_URL` - Public URL of the application
+- `ISSUER_URL` - OIDC provider URL (optional, for custom auth)
+- `CLIENT_ID` / `CLIENT_SECRET` - OAuth credentials (optional)
+
 ## External Dependencies
 
 **Database**: 
