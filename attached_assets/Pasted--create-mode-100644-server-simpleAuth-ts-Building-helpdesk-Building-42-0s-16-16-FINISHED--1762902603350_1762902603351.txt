@@ -1,0 +1,32 @@
+ create mode 100644 server/simpleAuth.ts
+Building helpdesk
+[+] Building 42.0s (16/16) FINISHED                                                                                                                                                                                           docker:default
+ => [internal] load build definition from Dockerfile                                                                                                                                                                                    0.0s
+ => => transferring dockerfile: 1.48kB                                                                                                                                                                                                  0.0s
+ => [internal] load metadata for docker.io/library/node:20-alpine                                                                                                                                                                       1.0s
+ => [internal] load .dockerignore                                                                                                                                                                                                       0.0s
+ => => transferring context: 546B                                                                                                                                                                                                       0.0s
+ => [builder 1/7] FROM docker.io/library/node:20-alpine@sha256:6178e78b972f79c335df281f4b7674a2d85071aae2af020ffa39f0a770265435                                                                                                         0.0s
+ => [internal] load build context                                                                                                                                                                                                       0.0s
+ => => transferring context: 51.15kB                                                                                                                                                                                                    0.0s
+ => CACHED [builder 2/7] WORKDIR /app                                                                                                                                                                                                   0.0s
+ => [stage-1 3/6] RUN addgroup -g 1001 -S nodejs &&     adduser -S nodejs -u 1001                                                                                                                                                       0.4s
+ => [builder 3/7] COPY package*.json ./                                                                                                                                                                                                 0.1s
+ => [builder 4/7] RUN npm ci                                                                                                                                                                                                           13.3s
+ => [builder 5/7] COPY . .                                                                                                                                                                                                              0.0s 
+ => [builder 6/7] RUN npm run build                                                                                                                                                                                                     8.7s 
+ => [builder 7/7] RUN npx esbuild server/static.ts --platform=node --packages=external --bundle=false --format=esm --outdir=dist                                                                                                        0.8s 
+ => [stage-1 4/6] COPY --from=builder --chown=nodejs:nodejs /app/dist ./dist                                                                                                                                                            0.0s 
+ => [stage-1 5/6] COPY --from=builder --chown=nodejs:nodejs /app/package*.json ./                                                                                                                                                       0.4s 
+ => [stage-1 6/6] RUN npm ci --only=production &&     npm cache clean --force                                                                                                                                                          11.7s 
+ => exporting to image                                                                                                                                                                                                                  4.8s 
+ => => exporting layers                                                                                                                                                                                                                 4.8s 
+ => => writing image sha256:866bc474d7caa0fdb5888fd0ba8662fc414afd083cd58e16f687410d4c87d5e0                                                                                                                                            0.0s 
+ => => naming to docker.io/library/app-helpdesk_helpdesk                                                                                                                                                                                0.0s 
+Creating network "app-helpdesk_default" with the default driver                                                                                                                                                                              
+Creating helpdesk-app ... done
+Attaching to helpdesk-app
+helpdesk-app | ⚠️  Running in NO-AUTH mode (OIDC disabled)
+helpdesk-app |    All users will have full access
+helpdesk-app | serving on port 5000
+helpdesk-app | GET /api/health 200 in 15ms :: {"status":"ok","timestamp":"2025-11-11T23:09:56.…
