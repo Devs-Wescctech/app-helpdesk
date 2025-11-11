@@ -1,6 +1,7 @@
 import type { Express, RequestHandler } from "express";
 import session from "express-session";
 import connectPg from "connect-pg-simple";
+import { storage } from "./storage";
 
 export function getSession() {
   const sessionTtl = 7 * 24 * 60 * 60 * 1000;
@@ -27,6 +28,23 @@ export function getSession() {
 export async function setupAuth(app: Express) {
   console.log('⚠️  Running in NO-AUTH mode (OIDC disabled)');
   console.log('   All users will have full access');
+  
+  // Create admin user in database if it doesn't exist
+  try {
+    await storage.upsertUser({
+      id: 'admin',
+      email: 'admin@helpdesk.local',
+      firstName: 'Admin',
+      lastName: 'User',
+      role: 'admin',
+      department: null,
+      profileImageUrl: null,
+      phone: null,
+    });
+    console.log('✅ Admin user created/updated in database');
+  } catch (error) {
+    console.error('❌ Failed to create admin user:', error);
+  }
   
   app.set("trust proxy", 1);
   app.use(getSession());
